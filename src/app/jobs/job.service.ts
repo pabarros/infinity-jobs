@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { MOCK_JOBS } from './mock-jobs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Job } from './job';
 
@@ -9,9 +10,13 @@ import { Job } from './job';
 })
 export class JobService {
 
-  constructor() { }
+  static _githubJobsApi = 'https://jobs.github.com/positions.json';
+
+  constructor(
+    private _httpClient: HttpClient
+  ) { }
 
   getJobs(): Observable<Job[]> {
-    return of(MOCK_JOBS);
+    return of(MOCK_JOBS)
   }
 }

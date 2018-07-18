@@ -1,12 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
+// Angular
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+// Infinity Jobs
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header.component';
 import { HomeModule } from './home/home.module';
-import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
 import { JobModule } from './jobs/job.module';
 
 @NgModule({
@@ -18,6 +21,7 @@ import { JobModule } from './jobs/job.module';
     CommonModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     HomeModule,
     JobModule

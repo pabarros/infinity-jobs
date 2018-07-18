@@ -10,12 +10,13 @@ import { JobService } from '../job.service';
 export class JobListComponent implements OnInit {
 
   jobs: Job[];
+  res: any;
 
   constructor(private _jobService: JobService) { }
 
   ngOnInit() {
     this._jobService.getJobs()
-      .subscribe(jobs => this.jobs = jobs);
+      .subscribe(jobs => this.jobs = []);
   }
 
 }
