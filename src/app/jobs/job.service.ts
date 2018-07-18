@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Job } from './job';
-import { MOCK_JOBS } from './mock.jobs';
 
 @Injectable({
   providedIn: 'root'
