@@ -1,3 +1,41 @@
-<p>
-  job-list works!
-</p>
+<div class="box" *ngFor='let job of jobs'>
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img [src]="job.company_logo ? job.company_logo : 'assets/company-generic-logo.png'" alt="{{job.company}} Logo">
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <div>
+          <strong>{{job.title}}</strong>
+          <small> at </small>
+          <a [href]="job.company_url ? job.company_url : '#'" [title]="job.company_url ? job.company_url : 'Site not Found'">
+            <small>{{job.company}}</small>
+          </a>
+        </div>
+        <div>
+          {{job.location}}
+          <span>
+            <a [href]="job.locationSearchGMaps()">see on maps</a>
+          </span>
+          <span class='icon'>
+            <i class='lnr lnr-map-marker'></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="media-right">
+      <div>
+        <p class='has-text-right'>
+          <span class="has-text-success has-text-weight-bold">{{job.type}}</span>
+        </p>
+        <p>
+          <span class="has-text-grey">{{job.created_at}}</span>
+        </p>
+
+
+      </div>
+    </div>
+  </article>
+</div>

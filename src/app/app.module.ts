@@ -6,19 +6,21 @@ import { HeaderComponent } from './shared/layout/header.component';
 import { HomeModule } from './home/home.module';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
-import { JobListComponent } from './jobs/job-list/job-list.component';
+import { FormsModule } from '@angular/forms';
+import { JobModule } from './jobs/job.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    JobListComponent
+    HeaderComponent
   ],
   imports: [
-    BrowserModule,
     CommonModule,
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
     HomeModule,
-    AppRoutingModule
+    JobModule
   ],
   providers: [],
   bootstrap: [AppComponent]

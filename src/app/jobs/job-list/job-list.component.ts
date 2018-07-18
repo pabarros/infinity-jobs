@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Job } from '../job';
+import { JobService } from '../job.service';
 
 @Component({
   selector: 'ij-job-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobListComponent implements OnInit {
 
-  constructor() { }
+  jobs: Job[];
+
+  constructor(private _jobService: JobService) { }
 
   ngOnInit() {
+    this._jobService.getJobs()
+      .subscribe(jobs => this.jobs = jobs);
   }
 
 }
