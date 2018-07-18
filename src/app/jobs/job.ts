@@ -28,6 +28,6 @@ export class Job {
   }
 
   public get createdAt(): string {
-    return this._createdAt.slice(0, 12);
+    return this._createdAt.slice(0, 10);
   }
 }

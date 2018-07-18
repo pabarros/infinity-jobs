@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
 import { Job } from './job';
+import { MOCK_JOBS } from './mock.jobs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,6 @@ export class JobService {
   ) { }
 
   getJobs(): Observable<Job[]> {
-    return of(MOCK_JOBS)
+    return of(MOCK_JOBS);
   }
 }

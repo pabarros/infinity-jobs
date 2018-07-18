@@ -27,7 +27,7 @@
           {{job.location}}
           <span>
             <a [href]="job.locationSearchGMaps()">
-              <span class='icon' title="See on Google Maps">
+              <span class='icon' title="See {{job.location}} on Google Maps">
                 <i class='lnr lnr-map-marker'></i>
               </span>
             </a>
@@ -40,7 +40,7 @@
         <p class='has-text-right'>
           <span class="has-text-success has-text-weight-bold">{{job.type}}</span>
         </p>
-        <p>
+        <p class='has-text-right'>
           <span class="has-text-grey is-size-6">{{job.createdAt}}</span>
         </p>
         <p class='has-text-right'>
