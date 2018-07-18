@@ -2,15 +2,15 @@ export class Job {
 
   constructor(
     public id: string,
-    public created_at: string,
+    private _createdAt: string,
     public title: string,
     public location: string,
     public type: string,
     public description: string,
-    public how_to_apply: string,
+    public howToApply: string,
     public company: string,
-    public company_url: string,
-    public company_logo: string,
+    public companyUrl: string,
+    public companyLogo: string,
     public url: string
   ) { }
 
@@ -25,5 +25,9 @@ export class Job {
       .replace(' ', '+');
 
     return `${googleMapsUrl}${formatedLocation}`;
+  }
+
+  public get createdAt(): string {
+    return this._createdAt.slice(0, 12);
   }
 }
