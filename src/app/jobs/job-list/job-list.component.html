@@ -1,4 +1,4 @@
-<ij-loader [showLoader]='!hasJobsLoaded' [displayText]="'Loading jobs'"></ij-loader>
+<ij-loader [showLoader]='!hasJobsLoaded' [displayText]="'Looking for jobs'"></ij-loader>
 
 <h4 [hidden]='!hasJobsLoaded' class='subtitle is-4 has-text-grey-darker'>
   Top {{jobsCount}} Jobs
@@ -31,7 +31,7 @@
     <div class="media-right">
       <div>
         <p class='has-text-right'>
-          <ij-job-allow-remote [jobLocation]='job.location'></ij-job-allow-remote>
+          <ij-job-allow-remote [jobAllowRemote]='job.allowRemote'></ij-job-allow-remote>
         </p>
         <p class='has-text-right'>
           <span class="has-text-grey is-size-6">{{job.createdAt}}</span>

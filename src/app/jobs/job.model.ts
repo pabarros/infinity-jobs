@@ -16,4 +16,8 @@ export class Job {
   public get createdAt(): string {
     return this._createdAt.slice(0, 10);
   }
+
+  public get allowRemote(): boolean {
+    return this.location.toLocaleLowerCase().indexOf('remote') !== -1;
+  }
 }

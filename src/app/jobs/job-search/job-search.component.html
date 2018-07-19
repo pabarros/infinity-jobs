@@ -21,9 +21,9 @@
   </div>
   <div class="column is-one-fifth has-text-centered is-vcentered">
     <div class="field">
-      <input class='is-checkradio is-circle is-info' id='remote-only' type="checkbox">
-      <label for='remote-only'>Only
-        <span class="has-text-weight-bold has-text-primary">Allow Remote</span>
+      <input class='is-checkradio is-circle is-info' id='remote-only' type="checkbox" (change)='changeAllowRemote()' [checked]='allowRemoteIsChecked'>
+      <label for='remote-only'>
+        <span class="has-text-weight-bold has-text-primary">Allow Remote</span> Only
       </label>
     </div>
   </div>

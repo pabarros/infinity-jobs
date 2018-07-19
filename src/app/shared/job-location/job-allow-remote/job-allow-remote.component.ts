@@ -6,13 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class JobAllowRemoteComponent implements OnInit {
 
-  @Input() jobLocation = '';
-  public jobAllowRemote = false;
+  @Input() jobAllowRemote = false;
 
   constructor() { }
 
   ngOnInit() {
-    this.jobAllowRemote = this.jobLocation.toLocaleLowerCase().indexOf('remote') !== -1;
   }
 
 }
