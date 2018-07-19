@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Job } from '../job';
+import { Job } from '../job.model';
 import { JobService } from '../job.service';
 
 @Component({
@@ -10,13 +10,18 @@ import { JobService } from '../job.service';
 export class JobListComponent implements OnInit {
 
   jobs: Job[];
-  res: any;
+  public jobsCount = 0;
+  public hasJobsLoaded = false;
 
   constructor(private _jobService: JobService) { }
 
   ngOnInit() {
     this._jobService.getJobs()
-      .subscribe(jobs => this.jobs = jobs);
+      .subscribe((jobs: Job[]) => {
+        this.jobs = jobs.slice(0, 10);
+        this.hasJobsLoaded = true;
+        this.jobsCount = this.jobs.length;
+      });
   }
 
 }

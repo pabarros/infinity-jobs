@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bulma/css/bulma.min.css",
-              "./node_modules/linearicons/dist/web-font/style.css"
+              "./node_modules/bulma-checkradio/dist/css/bulma-checkradio.min.css",
+              "./node_modules/linearicons/dist/web-font/style.css",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },

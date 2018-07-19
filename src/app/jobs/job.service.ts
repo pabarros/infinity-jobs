@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Job } from './job';
+import { Job } from './job.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
 
-  static _infinityJobsApi = 'http://127.0.0.1:4040/';
+  static _infinityJobsApi = 'https://api-infinity-jobs.herokuapp.com/jobs/';
 
   constructor(
     private _httpClient: HttpClient
@@ -25,7 +25,6 @@ export class JobService {
             job.created_at,
             job.title,
             job.location,
-            job.type,
             job.description,
             job.how_to_apply,
             job.company,

@@ -11,7 +11,6 @@ import { HeaderComponent } from './shared/layout/header.component';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { JobModule } from './jobs/job.module';
-
 @NgModule({
   declarations: [
     AppComponent,

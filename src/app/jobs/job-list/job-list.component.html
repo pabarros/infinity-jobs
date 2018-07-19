@@ -1,10 +1,9 @@
-<h4 class='subtitle is-4 has-text-grey-darker'>
-  <span class="icon has-text-info">
-    <i class="lnr lnr-briefcase"></i>
-  </span>
-  Top 50th Jobs
+<ij-loader [showLoader]='!hasJobsLoaded' [displayText]="'Loading jobs'"></ij-loader>
+
+<h4 [hidden]='!hasJobsLoaded' class='subtitle is-4 has-text-grey-darker'>
+  Top {{jobsCount}} Jobs
 </h4>
-<hr>
+<hr *ngIf='hasJobsLoaded'>
 <div class="box" *ngFor='let job of jobs'>
   <article class="media">
     <div class="media-left">
@@ -15,30 +14,24 @@
     <div class="media-content">
       <div class="content">
         <div>
-          <strong>{{job.title}}</strong>
+          <strong [innerHtml]='job.title'></strong>
         </div>
         <div>
           <small> at </small>
-          <a [href]="job.companyUrl ? job.companyUrl : '#'" [title]="job.companyUrl ? job.companyUrl : 'Site not Found'">
-            {{job.company}}
+          <span> {{job.company}} </span>
+          <a *ngIf='job.companyUrl' class='is-size-7 is-italic' [href]="job.companyUrl">
+            ({{job.companyUrl}})
           </a>
         </div>
         <div>
-          {{job.location}}
-          <span>
-            <a [href]="job.locationSearchGMaps()">
-              <span class='icon' title="See {{job.location}} on Google Maps">
-                <i class='lnr lnr-map-marker'></i>
-              </span>
-            </a>
-          </span>
+          <ij-job-location-google-maps [jobLocation]='job.location'></ij-job-location-google-maps>
         </div>
       </div>
     </div>
     <div class="media-right">
       <div>
         <p class='has-text-right'>
-          <span class="has-text-success has-text-weight-bold">{{job.type}}</span>
+          <ij-job-allow-remote [jobLocation]='job.location'></ij-job-allow-remote>
         </p>
         <p class='has-text-right'>
           <span class="has-text-grey is-size-6">{{job.createdAt}}</span>
@@ -46,7 +39,6 @@
         <p class='has-text-right'>
           <a>See details</a>
         </p>
-
       </div>
     </div>
   </article>
