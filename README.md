@@ -1,7 +1,7 @@
 # Infinity Jobs
 
 Find nice Jobs arround the world!
-Url: [infinity-jobs.herokuapp.com](infinity-jobs.herokuapp.com).
+Url: [infinity-jobs.herokuapp.com](https://infinity-jobs.herokuapp.com).
 
 ## Development
 
@@ -15,3 +15,6 @@ Make sure you have **NodeJS** installed.
 npm install
 npm start 
 ```
+
+
+## \*PROJECT UNDER DEVELOPMENT\*
