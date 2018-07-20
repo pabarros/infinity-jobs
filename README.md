@@ -5,7 +5,7 @@ Url: [infinity-jobs.herokuapp.com](infinity-jobs.herokuapp.com).
 
 ## Development
 
-**Infinity Jobs** is a *Angular* app experimentation, using [api-infinity-jobs.herokuapp.com](https://github.com/abekroenem/api-infinity-jobs) API.
+**Infinity Jobs** is a *Angular* app experimentation, using [api-infinity-jobs](https://github.com/abekroenem/api-infinity-jobs) API.
 
 ## How to run
 
