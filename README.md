@@ -1,7 +1,8 @@
 # Infinity Jobs
 
 Find nice Jobs arround the world!
-Url: [infinity-jobs.herokuapp.com](https://infinity-jobs.herokuapp.com).
+
+[infinity-jobs.herokuapp.com](https://infinity-jobs.herokuapp.com).
 
 ## Development
 
