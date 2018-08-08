@@ -1,4 +1,4 @@
-<ij-loader [showLoader]='!hasJobsLoaded' [displayText]="'Looking for jobs'"></ij-loader>
+<ij-loader [showLoader]="!hasJobsLoaded" [displayText]="'Looking for Jobs'"></ij-loader>
 
 <h4 [hidden]='!hasJobsLoaded' class='subtitle is-4 has-text-grey-darker'>
   Top {{jobsCount}} Jobs
@@ -8,7 +8,7 @@
   <article class="media">
     <div class="media-left">
       <figure class="image is-64x64" *ngIf='job.companyLogo'>
-        <img [src]='job.companyLogo' alt="{{job.company}} Logo">
+        <img [src]="job.companyLogo" alt="{{job.company}} Logo">
       </figure>
     </div>
     <div class="media-content">

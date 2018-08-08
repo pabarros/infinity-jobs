@@ -1,6 +1,11 @@
 {{jobLocation}}
-<a [href]="jobLocationOnGMaps" title="Explore {{jobLocation}} on Google Maps">
+<a [hidden]='isFullyRemote' [href]="jobLocationOnGMaps" title="Explore {{jobLocation}} on Google Maps">
   <span class='icon'>
     <span class='lnr lnr-map-marker'></span>
   </span>
 </a>
+<span [hidden]="!isFullyRemote">
+  <span class='icon'>
+    <span class='lnr lnr-laptop-phone'></span>
+  </span>
+</span>

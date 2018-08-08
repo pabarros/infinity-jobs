@@ -6,13 +6,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class JobLocationGoogleMapsComponent implements OnInit {
 
+  // Job location description
   @Input() jobLocation: string;
+
+  // Job location formated to google maps
   jobLocationOnGMaps: string;
+
+  // Flag to show or hidden remote and location icon
+  isFullyRemote: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
     this.setLocationGMaps();
+    this.verifyFullRemoteLocation();
   }
 
   /**
@@ -28,4 +35,15 @@ export class JobLocationGoogleMapsComponent implements OnInit {
     this.jobLocationOnGMaps = `${googleMapsUrl}${formatedLocation}`;
   }
 
+  /**
+   * Check if job location has only remote available,
+   * to make location mark will desapear.
+   */
+  verifyFullRemoteLocation(): void {
+    const pattern = new RegExp('^remote$');
+
+    this.isFullyRemote = pattern.test(
+      this.jobLocation.toLocaleLowerCase().trim()
+    );
+  }
 }

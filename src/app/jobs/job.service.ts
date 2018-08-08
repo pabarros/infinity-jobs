@@ -16,7 +16,7 @@ export class JobService {
     private _httpClient: HttpClient
   ) { }
 
-  getJobs(): Observable<Job[]> {
+  public getJobs(): Observable<Job[]> {
     return this._httpClient.get(JobService._infinityJobsApi).
       pipe(
         map((res: Array<any>) => res.map(job =>
@@ -29,10 +29,9 @@ export class JobService {
             job.how_to_apply,
             job.company,
             job.company_url,
-            job.company_logo,
+            String(job.company_logo).replace('http', 'https'),
             job.url
           )))
       );
   }
-
 }
