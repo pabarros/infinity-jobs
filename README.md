@@ -2,11 +2,11 @@
 
 Find nice Jobs arround the world!
 
-[infinity-jobs.herokuapp.com](https://infinity-jobs.herokuapp.com).
+<a href="https://infinity-jobs.herokuapp.com" target="_blank">infinity-jobs.herokuapp.com</a>
 
 ## Development
 
-**Infinity Jobs** is a *Angular* app experimentation, using [api-infinity-jobs](https://github.com/abekroenem/api-infinity-jobs) API.
+**Infinity Jobs** is a *Angular* app experimentation, using <a href="https://github.com/abekroenem/api-infinity-jobs" target="_blank">api-infinity-jobs</a> API.
 
 ## How to run
 
