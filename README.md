@@ -1,6 +1,6 @@
 # Infinity Jobs
 
-Find nice Jobs arround the world!
+Find nice Jobs around the world!
 
 <a href="https://infinity-jobs.herokuapp.com" target="_blank">infinity-jobs.herokuapp.com</a>
 
